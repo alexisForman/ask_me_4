@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user: one
+  good_path: MyString
+  ordinary_path: MyString
+  bad_path: MyString
+
+two:
+  user: two
+  good_path: MyString
+  ordinary_path: MyString
+  bad_path: MyString

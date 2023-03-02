@@ -1,0 +1,33 @@
+<table>
+    <td>
+            <%= link_to "Home", home_path %>           
+    </td>
+    <td>
+            <%= link_to "About Us", aboutus_path %>           
+    </td>
+    <td>
+            <%= link_to "Rules", rules_path %>         
+    </td>
+
+    <td>
+            <%= link_to "Disclaimer", disclaimer_path %>           
+    </td>
+
+    <td>
+</table>  
+
+<% if !logged_in? %>
+<table>
+        <p>Participate: 
+            <%= link_to "Login", login_path %>     
+            <%= link_to "Signup", signup_path %>
+            <%= link_to "Reset Password", password_reset_path %>
+            </p> 
+    </td>
+</table>
+<% else %>
+<p>You are logged in as: <%= current_user.username %> </p>
+<%= link_to 'Logout', logout_path, data: { "turbo-method": :delete } %>
+<% end %>
+
+

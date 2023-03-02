@@ -1,0 +1,18 @@
+<h1>Returning users, log in here!</h1>
+
+<%= form_with do |form| %>
+    <div>
+        <%= form.label :username %>
+        <%= form. text_field :username %>
+    </div>
+
+    <div>
+        <%= form.label :password %>
+        <%= form.password_field :password %>
+    </div>
+
+        <div>
+        <%= form.submit "Return for more fun!" %>
+    </div>
+
+<% end %>
