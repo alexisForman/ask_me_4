@@ -4,7 +4,7 @@ class User < ApplicationRecord
 
     has_secure_password
 
-    has_many :photo
+    has_one :photo
     
     
 end

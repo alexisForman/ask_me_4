@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
     session[:user_id] = user.id
     if user && user.authenticate(params[:password])
       flash[:notice] = "Login successful, welcome back!"
-      redirect_to upload_path
+      redirect_to new_photo_path
     else
       flash[:notice] = "Login unsuccessful, try again!"
       render :new, status: :unprocessable_entity

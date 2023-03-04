@@ -1,8 +1,5 @@
 Rails.application.routes.draw do
 
-  get '/upload', to: "photos#new"
-  post '/upload', to: "photos#create"
-  get '/my_homepage', to: "photos#show"
   get '/home', to: "static_pages#home"
   get '/aboutus', to: "static_pages#about_us"
   get '/rules', to: "static_pages#rules"
@@ -22,6 +19,7 @@ Rails.application.routes.draw do
 
 
   resources :users, except: [:new]
+  resources :photos
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")

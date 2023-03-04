@@ -1,29 +1,26 @@
-<%= form_with(model: @photos) do |form| %>
+<%= form_with model: @photo do |form| %>
 
-<table>
-    <td>
         <div>
-            <%= form.label "This is a good picture of myself that I like." %>
-            <%= form.file_field :good_path %>
+            <%= form.label "This should be a good picture of you that you like; tell us one thing about it: " %>
+            <%= form.text_field :good_path %>
+            <%= form.file_field :image_good_path %>
         </div>
-    </td>
+
+        <div>
+            <%= form.label "This should be just an ordinary, everyday picture of yourself; tell us one thing about it: " %>
+            <%= form.text_field :ordinary_path %>
+            <%= form.file_field :image_good_path %>
+        </div>
     
-    <td>
         <div>
-            <%= form.label "This is just an ordinary, everyday picture of me." %>
-            <%= form.file_field :ordinary_path %>
+            <%= form.label "This is one of the worst photos in existance of you; tell us one thing about it: " %>
+            <%= form.text_field :bad_path %>
+            <%= form.file_field :image_bad_path %>
         </div>
-    </td>
-    <td>
-        <div>
-            <%= form.label "This is one of the worst photos in existance of me." %>
-            <%= form.file_field :bad_path %>
-        </div>
-    </td>
 
-    </table>
-
-<%= form.hidden_field :user_id %>
+    <div>
+        <%= form.hidden_field :user_id %>
+    </div>
 
 <div>
     <%= form.submit %>
